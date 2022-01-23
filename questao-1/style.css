@@ -1,0 +1,57 @@
+body {
+	background: #f0f8f8;
+}
+
+h2 {
+	text-align: center;
+	color: #ffffff;
+	font-family: 'Lucida Sans', Verdana, sans-serif;
+	font-size: larger;
+}
+
+header, nav, article, section, aside, footer {
+	background: #659c9c;
+	padding: 20px 0;
+	margin: 10px;
+	border-radius: 6px;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+header, nav, footer {
+	height: calc(100vh * 0.05);
+}
+
+video {
+	height: 40vh;
+	margin: 10px auto;
+	display: block;
+	overflow: clip;	
+}
+
+main{
+	height: calc(100vh - (42vh));
+	display:flex;
+}
+
+article, aside {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+article {
+	flex:60%;
+	margin-right: 0;
+}
+
+section {
+	background: #4a8484;
+	height: auto;
+	overflow: clip;	
+	
+}
+
+aside {
+	flex:40%;
+}

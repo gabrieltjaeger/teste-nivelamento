@@ -1,0 +1,60 @@
+body {
+    background: #4f6438;
+}
+
+.caixa-comentario {
+    background: #fdfdfd;
+    border-radius: 5px 15px 45px 15px;
+    border-style: solid;
+    border-color: #c0c0c0;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+    transform: translateY(100%);
+
+}
+
+.avatar-do-usuario {
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #c0c0c0;
+    border-width: thick;
+    height: 150px;
+    margin-right: 15px;
+    transition: transform .2s;
+}
+
+.avatar-do-usuario:hover {
+    transform: scale(0.9);
+}
+
+.avatar-do-usuario:active {
+    transform: scale(1.1);
+}
+
+.comentario {
+    color:#343731;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+    font-size: medium;
+    text-align: justify;
+}
+
+.autor-do-comentario:before {
+    content:"Comentado por ";
+  }
+
+.autor-do-comentario:after {
+    content:".";
+  }
+
+.autor-do-comentario {
+    color: #000000;
+    font-size: small;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+}
+

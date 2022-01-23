@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        let gostei = false
+        let naoGostei = false
+        
+        function botaoClicado(id)
+        {
+            console.log("OI")
+            let botaoGostei = document.getElementById('botao-gostei')
+            let botaoNaoGostei = document.getElementById('botao-nao-gostei')
+            if(id == 'botao-gostei')
+            {
+                if (gostei == true && botaoGostei.classList.contains("gostei"))
+                {
+                    botaoGostei.classList.remove("gostei")
+                    return
+                }
+                else
+                {
+                gostei = true
+                naoGostei = false
+                }
+            }
+            else if(id == 'botao-nao-gostei')
+            {
+                if (naoGostei == true && botaoNaoGostei.classList.contains("nao-gostei"))
+                {
+                    botaoNaoGostei.classList.remove("nao-gostei")
+                    return
+                }
+                else
+                {
+                naoGostei = true
+                gostei = false
+                }
+            }
+
+            if(gostei)
+            {
+                botaoGostei.classList.add("gostei")
+                if (botaoNaoGostei.classList.contains("nao-gostei"))
+                {
+                    botaoNaoGostei.classList.remove("nao-gostei")
+                }
+            }
+            else if(naoGostei)
+            {
+                botaoNaoGostei.classList.add("nao-gostei")
+                if (botaoGostei.classList.contains("gostei"))
+                {
+                    botaoGostei.classList.remove("gostei")
+                }
+            }
+        }
+    </script>
+    <title>Questão 3 - ReactJS</title>
+</head>
+<body>
+    <main>
+        <div class="botoes">
+            <div class="botao" id="botao-gostei" onclick="botaoClicado(this.id)">
+                <h2>Gostei</h2>
+            </div>
+            <div class="botao" id="botao-nao-gostei" onclick="botaoClicado(this.id)">
+                <h2>Não gostei</h2>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
